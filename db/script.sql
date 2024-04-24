@@ -9,6 +9,8 @@ CREATE TABLE bruxos (
     status_sangue VARCHAR(50) NOT NULL,
     patrono VARCHAR(100) NOT NULL
 );
+INSERT INTO bruxos (nome, casa, idade, habilidade, status_sangue, patrono) VALUES 
+('Harry Potter', 'Grifinória', 17, 'Apanhar o pomo de ouro', 'Mestiço', 'Cervo');
 
 
 CREATE TABLE varinhas (
@@ -19,3 +21,5 @@ CREATE TABLE varinhas (
     data_fabricacao DATE NOT NULL
 );
 
+INSERT INTO varinhas (material, comprimento, nucleo, data_fabricacao) VALUES 
+('Madeira de Teixo', 30.5, 'Pena de Fênix', '1991-07-31');

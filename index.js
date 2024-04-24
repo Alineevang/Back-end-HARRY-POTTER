@@ -24,3 +24,15 @@ app.get('/', (req, res) => {
     res.send('Backend Harry Potter!');
 });
 
+app.get('/bruxos', async (req, res) => {
+    try {
+        const resultado = await pool.query('SELECT * FROM bruxos');
+        res.json({
+            total: resultado.rowCount,
+            bruxos: resultado.rows,
+        })
+    } catch (error) {
+        console.log('Error ao buscar bruxos', error);
+        res.status(500).json({ message: 'Erro ao buscar bruxos' });
+    }
+});
