@@ -63,11 +63,11 @@ app.put('/bruxos/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const { nome, casa, idade, habilidade, status_sangue, patrono } = req.body;
-        console.log('Dados recebidos no PUT:', req.body); // Verificar os dados recebidos no corpo da requisição
+        console.log('Dados recebidos no PUT:', req.body); 
         await pool.query('UPDATE bruxos SET nome = $1, casa = $2, idade = $3, habilidade = $4, status_sangue = $5, patrono = $6 WHERE id = $7', [nome, casa, idade, habilidade, status_sangue, patrono, id]);
         res.send({ message: 'Bruxo atualizado com sucesso!' });
     } catch (error) {
-        console.error('Erro ao atualizar bruxo:', error.message); // Verificar se há erros durante a execução da consulta SQL
+        console.error('Erro ao atualizar bruxo:', error.message); 
         res.status(500).send({ message: 'Erro ao atualizar bruxo' });
     }
 });
