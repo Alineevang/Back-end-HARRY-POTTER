@@ -9,8 +9,12 @@ CREATE TABLE bruxos (
     status_sangue VARCHAR(50) NOT NULL,
     patrono VARCHAR(100) NOT NULL
 );
+
 INSERT INTO bruxos (nome, casa, idade, habilidade, status_sangue, patrono) VALUES 
-('Harry Potter', 'Grifinória', 17, 'Apanhar o pomo de ouro', 'Mestiço', 'Cervo');
+('Aline Silva', 'Sonserina', 18, 'Apanhar o pomo de ouro', 'Mestiço', 'Leao');
+
+INSERT INTO bruxos (nome, casa, idade, habilidade, status_sangue, patrono) VALUES 
+('Steh Rodrigues', 'Grifinoria', 19, 'Magia', 'Puro', 'Aguia');
 
 
 CREATE TABLE varinhas (
